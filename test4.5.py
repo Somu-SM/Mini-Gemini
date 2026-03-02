@@ -75,7 +75,7 @@ st.markdown(f"""
     """, unsafe_allow_html=True)
 
 # --- 3. INITIALIZATION ---
-GEMINI_API_KEY = "AIzaSyBSDSIVc4dkBO6msUSmWdfbt3HZE0ItdOU" 
+GEMINI_API_KEY = "Enter Google API Key:" 
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 if "chat_sessions" not in st.session_state:
@@ -152,4 +152,5 @@ if st.session_state.active_chat_id:
 
     st.markdown("<div class='portfolio-footer'>Powered by Gemini 2.5 Flash | Somasundaram Portfolio</div>", unsafe_allow_html=True)
 else:
+
     st.info("Vanakkam 🙏 Please select a new chat to begin.")
