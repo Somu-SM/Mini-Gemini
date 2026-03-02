@@ -4,7 +4,7 @@ from google import genai
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 # --- CONFIGURATION ---
-GEMINI_API_KEY = "AIzaSyBSDSIVc4dkBO6msUSmWdfbt3HZE0ItdOU"  # Replace with your actual key
+GEMINI_API_KEY = "Enter Google API Key:"  # Replace with your actual key
 
 # 1. Initialize the new GenAI Client
 client = genai.Client(api_key=GEMINI_API_KEY)
@@ -26,4 +26,5 @@ if user_input:
         model="gemini-2.5-flash",
         contents=user_input
     )
+
     st.write(response.text)
