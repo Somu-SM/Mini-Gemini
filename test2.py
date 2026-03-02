@@ -22,7 +22,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # --- CONFIGURATION & CLIENT ---
-GEMINI_API_KEY = "AIzaSyBSDSIVc4dkBO6msUSmWdfbt3HZE0ItdOU"
+GEMINI_API_KEY = "Enter Google API Key:"
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 # --- SESSION STATE ---
@@ -71,4 +71,5 @@ if prompt := st.chat_input("Ask about Indian culture or analyze your file..."):
     
     st.session_state.sessions[st.session_state.current_chat].append({"role": "assistant", "content": response.text})
     with st.chat_message("assistant"):
+
         st.markdown(response.text)
