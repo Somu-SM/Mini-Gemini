@@ -3,7 +3,7 @@ from google import genai
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 # --- CONFIGURATION ---
-GEMINI_API_KEY = "AIzaSyBSDSIVc4dkBO6msUSmWdfbt3HZE0ItdOU"
+GEMINI_API_KEY = "Enter Google API Key:"
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 # --- CHAT STORAGE SETUP ---
@@ -48,4 +48,5 @@ if prompt := st.chat_input("Ask me anything:"):
     full_response = response.text
     st.session_state.messages.append({"role": "assistant", "content": full_response})
     with st.chat_message("assistant"):
+
         st.markdown(full_response)
