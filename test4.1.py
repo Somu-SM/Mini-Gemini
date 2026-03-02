@@ -48,7 +48,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # --- 2. INITIALIZATION ---
-GEMINI_API_KEY = "AIzaSyBSDSIVc4dkBO6msUSmWdfbt3HZE0ItdOU" 
+GEMINI_API_KEY = "Enter Google API Key:" 
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 if "chat_sessions" not in st.session_state:
@@ -123,4 +123,5 @@ if st.session_state.active_chat_id:
         except Exception as e:
             st.error(f"API Error: {e}")
 else:
+
     st.info("Namaste! Please select or create a chat to begin.")
