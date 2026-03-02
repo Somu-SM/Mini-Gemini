@@ -39,7 +39,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # --- 2. INITIALIZATION ---
-GEMINI_API_KEY = "AIzaSyBSDSIVc4dkBO6msUSmWdfbt3HZE0ItdOU" # Replace with your actual key
+GEMINI_API_KEY = "Enter Google API Key:" # Replace with your actual key
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 if "chat_sessions" not in st.session_state:
@@ -147,4 +147,5 @@ if st.session_state.active_chat_id:
     st.markdown("<p class='upload-footer'>🪔 Powered by Gemini 2.5 Flash | Somasundaram Portfolio</p>", unsafe_allow_html=True)
 
 else:
+
     st.info("Pranam! Click '➕ New Journey' in the sidebar to begin your conversation.")
